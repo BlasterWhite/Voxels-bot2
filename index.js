@@ -1,4 +1,3 @@
-/*Base*/
 const botconfig = require("./botconfig.json");
 const { Client, MessageAttachment } = require('discord.js');
 const client = new Client();
@@ -13,6 +12,13 @@ client.on('message', async message => {
     if(message.channel.type === "dm") return;
 
     let prefix = botconfig.prefix;
+    let messageArray = message.content.split(" ")
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1);
+
+    if(cmd === '${prefix}hello') {
+        return message.channel.send("Hey !")
+    }
 });
 
 client.login(botconfig.token);

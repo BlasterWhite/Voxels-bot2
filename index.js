@@ -1,24 +1,25 @@
 const botconfig = require("./botconfig.json");
-const { Client, MessageAttachment } = require('discord.js');
-const client = new Client();
+const Discord = require('discord.js');
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('Hello', {type: "WATCHING"});
-});
+const bot = new Discord.Client({disableEverryone : true});
 
-client.on('message', async message => {
-    if(message.author.client)return;
-    if(message.channel.type === "dm") return;
+bot.on("ready", async () => {
+  console.log(`Logged in as ${bot.user.tag}!`)
+  bot.user.setActivity("Hello", {type: "STREAMING"});
+})
+
+bot.on('message', async message => {
+    if(message.author.bot || message.channel.type === "dm") return;
 
     let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if(cmd === '${prefix}hello') {
-        return message.channel.send("Hey !")
+    if(cmd === `${prefix}hello`){
+        return message.channel.send("Hello")
     }
-});
+    
+})
 
-client.login(botconfig.token);
+bot.login(botconfig.token);

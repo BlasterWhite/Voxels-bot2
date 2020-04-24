@@ -1,4 +1,5 @@
 const botconfig = require("./botconfig.json");
+const coulours = require("./coulours.json");
 const Discord = require('discord.js');
 
 const bot = new Discord.Client({disableEverryone : true});
@@ -19,7 +20,19 @@ bot.on('message', async message => {
     if(cmd === `${prefix}hello`){
         return message.channel.send("Hello")
     }
-    
+    if(cmd === `${prefix}serverinfo`){
+        let sEmbed = new Discord.MessageEmbed()
+        .setColor(coulours.orange)
+        .setTitle("Serveur Info")
+        .setAuthor(`${message.guild.name} Info`, message.guild.iconURL)
+        .addField("**Guild Name**", `${message.guild.name}`, true)
+        .addField("**Guild Owner**", `${message.guild.owner}`, true)
+        .addField("**Member Count:**", `${message.guild.memberCount}`, true)
+        .addField("**Role Count:**", `${message.guild.roles.size}`, true)
+        .setFooter('Voxels Bot', bot.user.displayAvatarURL);
+        message.channel.send({embed: sEmbed});
+    }
+
 })
 
 bot.login(botconfig.token);

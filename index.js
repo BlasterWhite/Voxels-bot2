@@ -6,7 +6,7 @@ const bot = new Discord.Client({disableEverryone : true});
 
 bot.on("ready", async () => {
   console.log(`Logged in as ${bot.user.tag}!`)
-  bot.user.setActivity("Hello", {type: "STREAMING"});
+  bot.user.setActivity("Minecraft", {type: "PLAYING"});
 })
 
 bot.on('message', async message => {
@@ -24,7 +24,6 @@ bot.on('message', async message => {
         let sEmbed = new Discord.MessageEmbed()
         .setColor(coulours.orange)
         .setTitle("Serveur Info")
-        .setAuthor(`${message.guild.name} Info`, message.guild.iconURL)
         .addField("**Guild Name**", `${message.guild.name}`, true)
         .addField("**Guild Owner**", `${message.guild.owner}`, true)
         .addField("**Member Count:**", `${message.guild.memberCount}`, true)

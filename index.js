@@ -1,14 +1,10 @@
 const botconfig = require("./botconfig.json");
 const coulours = require("./coulours.json");
 const Discord = require('discord.js');
-require("./util/eventHandler")(bot)
 
 const bot = new Discord.Client({disableEverryone : true});
 
-bot.on("ready", async () => {
-  console.log(`Logged in as ${bot.user.tag}!`)
-  bot.user.setActivity("Minecraft", {type: "PLAYING"});
-})
+require("./util/eventHandler")(bot)
 
 const fs = require("fs");
 bot.commands = new Discord.Collection();
@@ -52,7 +48,7 @@ bot.on("message", async message => {
     }
 
     if(cmd === `${prefix}m`){
-        message.channel.send(`Tu pense que c'est un jeu @${message.author.username}? ok n`);
+        message.channel.send(`Tu pense que c'est un jeu ${message.author.username}? ok n`);
     }
 })
 

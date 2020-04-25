@@ -5,7 +5,7 @@ module.exports = bot => {
         reqEvent("ready")(bot)})
     bot.on("reconnecting", () => reqEvent("reconnecting") (bot))
     bot.on("disconnect", () => reqEvent("disconnect") (bot))
-    bot.on("warn", () => reqEvent("warn") (bot))
-    bot.on("error", () => reqEvent("error") (bot))    
+    bot.on("warn", () => reqEvent("warn"))
+    bot.on("error", () => reqEvent("error"))    
 
 }

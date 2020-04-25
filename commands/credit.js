@@ -1,10 +1,10 @@
 const Discord = require("discord.js")
 const botconfig = require("../botconfig.json")
-const coulours = require("../coulours.json")
+const couleurs = require("../couleurs.json")
 
 module.exports.run =async (bot, message, args) => {
     let cEmbed = new Discord.MessageEmbed()
-    .setColor(coulours.orange)
+    .setColor(couleurs.orange)
     .setTitle("Crédit du Voxels Bot")
     .addField("**Developpeurs**", `BlasterWhite\n`)
     .addField("Inspiré par :", `Série Discord Bot | par MenuDocs` )

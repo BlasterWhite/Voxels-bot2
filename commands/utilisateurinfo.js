@@ -1,10 +1,10 @@
 const Discord = require("discord.js")
-const coulours = require("../coulours.json")
+const couleurs = require("../couleurs.json")
 const botconfig = require("../botconfig.json")
 
 module.exports.run =async (bot, message, args) => {
     let uEmbed = new Discord.MessageEmbed()
-    .setColor(coulours.green)
+    .setColor(couleurs.green)
     .setTitle("Utilisateur Info")
     .setThumbnail(message.guild.iconURL)
     .setAuthor(`${message.author.username} Info`, message.author.displayAvatarURL)

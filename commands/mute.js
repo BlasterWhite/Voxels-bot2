@@ -45,7 +45,7 @@ mutee.roles.add(muterole.id).then(() => {
 //send an embed to the modlogs channel
 let embed = new Discord.MessageEmbed()
 .setColor(couleurs.red)
-.setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
+.setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
 .addField("Moderation:", "mute 🔈")
 .addField("Mutee:", `${mutee.user.username}#${mutee.user.discriminator}`)
 .addField("Moderator:", message.author.username)

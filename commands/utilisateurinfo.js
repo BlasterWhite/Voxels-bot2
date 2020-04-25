@@ -6,14 +6,14 @@ module.exports.run =async (bot, message, args) => {
     let uEmbed = new Discord.MessageEmbed()
     .setColor(couleurs.green)
     .setTitle("Utilisateur Info")
-    .setThumbnail(message.guild.iconURL)
-    .setAuthor(`${message.author.username} Info`, message.author.displayAvatarURL)
+    .setThumbnail(message.author.displayAvatarURL())
+    .setAuthor(`${message.author.username} Info`, message.guild.iconURL())
     .addField("**Nom**", `${message.author.username}`, true)
     .addField("**Numéro**", `${message.author.discriminator}`, true)
     .addField("**ID**", `${message.author.id}`, true)
     .addField("**Status**", `${message.author.presence.status}`, true)
     .addField("**Crée le :**", `${message.author.createdAt}`, true)
-    .setFooter('Voxels Bot', bot.user.displayAvatarURL);
+    .setFooter('Voxels Bot', bot.user.displayAvatarURL());
     message.channel.send({embed: uEmbed});
 }
 

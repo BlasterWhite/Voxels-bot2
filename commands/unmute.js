@@ -25,7 +25,7 @@ mutee.roles.remove(muterole.id).then(() => {
 
 let embed = new Discord.MessageEmbed()
 .setColor(couleurs.red)
-.setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
+.setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
 .addField("Moderation:", "unmute 🔊")
 .addField("Mutee:", `${mutee.user.username}#${mutee.user.discriminator}`)
 .addField("Moderator:", message.author.username)

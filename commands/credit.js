@@ -8,7 +8,7 @@ module.exports.run =async (bot, message, args) => {
     .setTitle("Crédit du Voxels Bot")
     .addField("**Developpeurs**", `BlasterWhite\n`)
     .addField("Inspiré par :", `Série Discord Bot | par MenuDocs` )
-    .setFooter('Voxels Bot', bot.user.displayAvatarURL);
+    .setFooter('Voxels Bot', bot.user.displayAvatarURL());
     message.channel.send({embed: cEmbed});
 }
 

@@ -28,13 +28,13 @@ module.exports.run = async (bot, message, args) => {
 
         let Sembed = new Discord.MessageEmbed()
         .setColor(couleurs.light_blue)
-        .setAuthor(`Voxels Bot Aide`, message.guild.iconURL)
-        .setThumbnail(bot.user.displayAvatarURL)
+        .setAuthor(`Voxels Bot Aide`, message.guild.iconURL())
+        .setThumbnail(bot.user.displayAvatarURL())
         .setTimestamp()
         .setDescription(`Ceci sont les commandes possible avec Voxels Bot.\nLe prefix du bot est :**${prefix}** \n`)
         .addField('Commandes:', "``aide`` ``utilisateurinfo`` ``serveurinfo`` ``test`` ``mute`` ``unmute`` ``credit`` ")
         .addField('La commande ``!aide``', "**!aide <nom de la commande>**")
-        .setFooter('Voxels Bot', bot.user.displayAvatarURL)
+        .setFooter('Voxels Bot', bot.user.displayAvatarURL())
         message.channel.send(embed).then(m => m.delete({ timeout: 5000}));
         message.author.send(Sembed)
     }

@@ -32,7 +32,7 @@ bot.on("message", async message => {
 
     let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ")
-    let cmd = messageArray[0];
+    let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
 
     if(!message.content.startsWith(prefix)){
@@ -48,7 +48,7 @@ bot.on("message", async message => {
     }
 
     if(cmd === `${prefix}m`){
-        message.channel.send(`Tu pense que c'est un jeu ${message.author.username}? ok n`);
+        message.channel.send(`Tu pense que c'est un jeu ${message.author.username}? ok "n"`);
     }
 })
 

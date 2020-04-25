@@ -1,6 +1,7 @@
 const botconfig = require("./botconfig.json");
 const coulours = require("./coulours.json");
 const Discord = require('discord.js');
+require("./util/eventHandler")(bot)
 
 const bot = new Discord.Client({disableEverryone : true});
 
@@ -48,6 +49,10 @@ bot.on("message", async message => {
 
     if(cmd === `${prefix}hello`){
         return message.channel.send("Hello")
+    }
+
+    if(cmd === `${prefix}m`){
+        message.channel.send(`Tu pense que c'est un jeu @${message.author.username}? ok n`);
     }
 })
 

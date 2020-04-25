@@ -18,6 +18,5 @@ module.exports.config = {
     name: "serveurinfo",
     alliases: ["si", "serverinfo", "servinfo", "serveri"],
     description: "",
-    noalias: "No Aliases",
-    accessableby: "members"
+    accessableby: "Membres"
 }

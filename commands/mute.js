@@ -38,7 +38,7 @@ if(!muterole) {
 
 mutee.roles.add(muterole.id).then(() => {
     message.delete({ timeout: 5000})
-    mutee.send(`🔈 Salut, tu as été muté.e ${message.guild.name} pour: ${reason}`).catch(err => console.log(err))
+    mutee.send(`🔈 Salut, tu as été muté.e sur ${message.guild.name} pour: ${reason}`).catch(err => console.log(err))
     message.channel.send(`🔈 ${mutee.user.username} a été mute.`)
 })
 
@@ -46,10 +46,10 @@ mutee.roles.add(muterole.id).then(() => {
 let embed = new Discord.MessageEmbed()
 .setColor(couleurs.red)
 .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
-.addField("Moderation:", "mute 🔈")
-.addField("Mutee:", `${mutee.user.username}#${mutee.user.discriminator}`)
-.addField("Moderator:", message.author.username)
-.addField("Reason:", reason)
+.addField("Moderation:", "🔈 Mute")
+.addField("Cible:", `${mutee.user.username}#${mutee.user.discriminator}`)
+.addField("Moderateur:", message.author.username)
+.addField("Raison:", reason)
 .addField("Date:", message.createdAt.toLocaleString())
 
 let sChannel = message.guild.channels.cache.find(c => c.name === "mod-logs")

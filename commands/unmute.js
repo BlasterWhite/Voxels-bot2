@@ -19,17 +19,17 @@ if(!muterole) return message.channel.send("Il n'y a pas de role _**Mute**_ !")
 
 mutee.roles.remove(muterole.id).then(() => {
     message.delete({ timeout: 5000})
-    mutee.send(`🔊 Salut, tu as été unmuté.e ${message.guild.name} pour: ${reason}`).catch(err => console.log(err))
+    mutee.send(`🔊 Salut, tu as été unmuté.e sur ${message.guild.name} pour: ${reason}`).catch(err => console.log(err))
     message.channel.send(`🔊 ${mutee.user.username} a été Demute!`)
 })
 
 let embed = new Discord.MessageEmbed()
 .setColor(couleurs.red)
 .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
-.addField("Moderation:", "unmute 🔊")
-.addField("Mutee:", `${mutee.user.username}#${mutee.user.discriminator}`)
-.addField("Moderator:", message.author.username)
-.addField("Reason:", reason)
+.addField("Moderation:", "🔊 Unmute")
+.addField("Cible:", `${mutee.user.username}#${mutee.user.discriminator}`)
+.addField("Moderateur:", message.author.username)
+.addField("Raison:", reason)
 .addField("Date:", message.createdAt.toLocaleString())
 
 let sChannel = message.guild.channels.cache.find(c => c.name === "mod-logs")

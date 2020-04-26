@@ -32,9 +32,15 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(bot.user.displayAvatarURL())
         .setTimestamp()
         .setDescription(`Ceci sont les commandes possible avec Voxels Bot.\nLe prefix du bot est :**${prefix}** \n`)
-        .addField('Commandes:', "``aide`` ``utilisateurinfo`` ``serveurinfo`` ``test`` ``mute`` ``unmute`` ``credit`` ")
-        .addField('La commande ``!aide``', "**!aide <nom de la commande>**")
-        .setFooter('Voxels Bot', bot.user.displayAvatarURL())
+        .addField("**Accepte**", "``!accept <@pseudo>``")
+        .addField("**Aide**", "``!aide <commande>``")
+        .addField("**Crédit**", "``!credit``")
+        .addField("**Kick**", "``!kick <@pseudo> <raison>``")
+        .addField("**Mute**", "``!mute <@pseudo> <raison>``")
+        .addField("**Unmute**", "``!unmute``")
+        .addField("**Utilisateur Info**", "``!utilisateurinfo``")
+        .addField("**Serveur Info**", "``!serveurinfo``")
+        .setFooter('Voxels Bot', bot.user.displayAvatarURL());
         message.channel.send(embed).then(m => m.delete({ timeout: 5000}));
         message.author.send(Sembed)
     }

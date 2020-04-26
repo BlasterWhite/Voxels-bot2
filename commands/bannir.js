@@ -3,11 +3,11 @@ const botconfig = require("../botconfig.json")
 const couleurs = require("../couleurs.json")
 
 module.exports.run =async (bot, message, args) => {
-    console.log("Oui ?")
+    message.channel.send("Oui")
 }
 
 module.exports.config = {
-    name: "Test",
+    name: "bannir",
     alliases: [],
     description: "Utulisé par le Dev",
     usage: "!test",

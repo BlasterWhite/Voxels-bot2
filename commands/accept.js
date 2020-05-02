@@ -18,7 +18,7 @@ newjoueur.roles.add("703675186607554560").then(() => {
 })
 
 let embed = new Discord.MessageEmbed()
-.setColor(couleurs.red)
+.setColor(couleurs.blue)
 .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
 .addField("Action:", "🆕 Nouveau Joueur")
 .addField("newjoueur:", `${newjoueur.user.username}#${newjoueur.user.discriminator}`)

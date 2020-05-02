@@ -1,15 +1,15 @@
 const Discord = require("discord.js")
 const botconfig = require("../botconfig.json")
-const couleurs = require("../couleurs.json")
 
 module.exports.run = async (bot, message, args) => {
     message.channel.send("Oui ?");
 }
 
 module.exports.config = {
-    name: "test",
+    name: "mouai",
     alliases: [],
     usage: `${botconfig.prefix}`,
+    description: "Mouai Mouai",
     noalias: "Pas d'Aliases",
-    accessableby: "Membre"
+    accessableby: "Modérateur | Administrateur"
 }

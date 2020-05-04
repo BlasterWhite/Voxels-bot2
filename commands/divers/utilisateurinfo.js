@@ -6,8 +6,10 @@ module.exports = {
     config: {
         name: "utilisateurinfo",
         aliases: ["ui", "usernameinfo", "userinfo", "usernamei", "useri"],
+        usage: " ",
         description: "",
         noalias: "No Aliases",
+        category: "divers",
         accessableby: "members"
     },
     run: async (bot, message, args) => {

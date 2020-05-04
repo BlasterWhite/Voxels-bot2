@@ -5,9 +5,10 @@ const botconfig = require("../../botconfig.json")
 module.exports = { 
     config: {
         name: "serveurinfo",
-        aliases: ["si", "serverinfo", "servinfo", "serveri"],
+        aliases: ["si", "serverinfo", "servinfo", "serveri"],        
         description: "",
-        usage: "``!serveurinfo``",
+        usage: " ",
+        category: "divers",
         accessableby: "Membres"
     },    
     run: async (bot, message, args) => {

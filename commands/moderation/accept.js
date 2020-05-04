@@ -9,7 +9,8 @@ module.exports= {
         name: "accepte",
         aliases: ["add", "new", "accept","accepté"],
         description: "Mute une personne",
-        usage: "``!accepte <@pseudo>``",
+        usage: "!accepte <@pseudo>",
+        category: "moderation",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

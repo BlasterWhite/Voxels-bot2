@@ -1,16 +1,14 @@
-const Discord = require("discord.js")
-const { prefix } = require("../../botconfig.json");
+const Discord = require("discord.js");
 const couleurs = require("../../couleurs.json");
-
-
 
 module.exports = {
     config: {
         name: "unmute",
         aliases: [],
         description: "Unmute une personne",
-        usage: `${prefix}unmute <@pseudo> <raison>`,
+        usage: `<@pseudo> <raison>`,
         noalias: "No Aliases",
+        category: "moderation",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

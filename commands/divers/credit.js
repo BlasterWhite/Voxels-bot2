@@ -5,8 +5,9 @@ module.exports = {
     config: { 
     name: "credit",
     aliases: ["crédit"],
-    description: "Donne tous les crédit de Voxels Bot",
-    usage: "``!credit``",
+    description: "Donne tous les crédit de Voxels Bot",    
+    usage: " ",
+    category: "divers",
     accessableby: "Membres"
     },
     run: async (bot, message, args) => {

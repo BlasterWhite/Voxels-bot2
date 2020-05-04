@@ -7,8 +7,9 @@ module.exports = {
         name: "ban",
         aliases: [],
         description: "Ban une personne",
-        usage: `<@username> <raison>`,
+        usage: `<@pseudo> <raison>`,
         noalias: "Pas d'Aliases",
+        category: "moderation",
         accessableby: "Membre"
     },
     run: async (bot, message, args) => {

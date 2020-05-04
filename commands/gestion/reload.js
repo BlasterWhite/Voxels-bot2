@@ -5,9 +5,10 @@ module.exports= {
     config: {
         name: "reload",
         aliases: [],
-        usage: `${botconfig.prefix}`,
+        usage: ` `,
         description: "Mouai Mouai",
         noalias: "Pas d'Aliases",
+        category: "gestion",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

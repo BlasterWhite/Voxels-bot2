@@ -9,8 +9,9 @@ module.exports = {
         name: "mute",
         aliases: [],
         description: "Mute une personne",
-        usage: "``!mute <@pseudo> <raison>``",
+        usage: "<@pseudo> <raison>",
         noalias: "No Aliases",
+        category: "moderation",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

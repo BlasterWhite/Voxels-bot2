@@ -2,15 +2,14 @@ const Discord = require("discord.js");
 const botconfig = require("../../botconfig.json");
 const couleurs = require("../../couleurs.json");
 
-
-
 module.exports = {
     config: {
         name: "unban",
         aliases: [],
         description: "Debannir une personne",
-        usage: "``!unban <ID>``",
+        usage: "<ID>",
         noalias: "No Aliases",
+        category: "moderation",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

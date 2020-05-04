@@ -1,12 +1,11 @@
-const botconfig = require("../../botconfig.json")
-
 module.exports = {
     config: {
         name: "test",
         aliases: [],
-        usage: `${botconfig.prefix}`,
+        usage: ` `,
         noalias: "Pas d'Aliases",
-        accessableby: "Membre"
+        category: "gestion",
+        accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {
     message.channel.send("Oui ?");

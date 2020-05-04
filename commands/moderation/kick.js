@@ -7,7 +7,8 @@ module.exports = {
         name: "kick",
         aliases: ["exclus"],
         description: "Kick une personne",
-        usage: "``!kick``",
+        usage: "<@pseudo>",
+        category: "moderation",
         accessableby: "Modérateur | Administrateur"
     },
     run: async (bot, message, args) => {

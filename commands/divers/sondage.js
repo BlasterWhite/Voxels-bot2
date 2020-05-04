@@ -7,7 +7,8 @@ module.exports = {
         name: "sondage",
         aliases: ["sond"],
         description: "",
-        usage: `${botconfig.prefix}sondage <Question>`,
+        usage: `<Question>`,
+        category: "divers",
         accessableby: "Membre"
     },    
     run: async (bot, message, args) => {

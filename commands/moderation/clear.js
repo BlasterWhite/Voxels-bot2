@@ -1,8 +1,15 @@
 const Discord = require("discord.js")
-const botconfig = require("../botconfig.json")
-const couleurs = require("../couleurs.json")
+const botconfig = require("../../botconfig.json")
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+    config: {
+    name: "clear",
+    aliases: ["efface"],
+    usage: `${botconfig.prefix}efface <nbre msg>`,
+    description: "efface le nombre de message demandé",
+    accessableby: "Modérateur | Administrateur"
+    },
+    run: async (bot, message, args) => {
     message.channel.send("En Cours de Developpement")
     // if(!args[0]){
     //     message.delete()
@@ -13,12 +20,5 @@ module.exports.run = async (bot, message, args) => {
     // for(x=0;x<args[0];x++){
     //     message.channel.send(x)
     // }
-}
-
-module.exports.config = {
-    name: "clear",
-    alliases: ["efface"],
-    usage: `${botconfig.prefix}efface <nbre msg>`,
-    description: "efface le nombre de message demandé",
-    accessableby: "Modérateur | Administrateur"
+    }
 }

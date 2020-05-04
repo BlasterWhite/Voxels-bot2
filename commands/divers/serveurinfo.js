@@ -1,8 +1,16 @@
 const Discord = require("discord.js")
-const couleurs = require("../couleurs.json")
-const botconfig = require("../botconfig.json")
+const couleurs = require("../../couleurs.json")
+const botconfig = require("../../botconfig.json")
 
-module.exports.run =async (bot, message, args) => {
+module.exports = { 
+    config: {
+        name: "serveurinfo",
+        aliases: ["si", "serverinfo", "servinfo", "serveri"],
+        description: "",
+        usage: "``!serveurinfo``",
+        accessableby: "Membres"
+    },    
+    run: async (bot, message, args) => {
     let sEmbed = new Discord.MessageEmbed()
     .setColor(couleurs.orange)
     .setTitle("Serveur Info")
@@ -12,12 +20,5 @@ module.exports.run =async (bot, message, args) => {
     .addField("**Nombre de Role:**", `${message.guild.roles.cache.size}`, true)
     .setFooter('Voxels Bot', bot.user.displayAvatarURL());
     message.channel.send({embed: sEmbed});
-}
-
-module.exports.config = {
-    name: "serveurinfo",
-    alliases: ["si", "serverinfo", "servinfo", "serveri"],
-    description: "",
-    usage: "``!serveurinfo``",
-    accessableby: "Membres"
+    }
 }
